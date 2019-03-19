@@ -17,7 +17,7 @@ npm install node-red-dashboard node-red-contrib-sensortag
 
 Run the following command in your NODE-RED install
 ```
-npm install node-red-contrib-iota-mam
+npm install node-red-contrib-iota-mam 
 ```
 
 # Usage
