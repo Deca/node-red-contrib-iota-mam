@@ -28,9 +28,14 @@ module.exports = function(RED) {
               // upload sensorTag's temperature
               // let concatWithDate = JSON.stringify("Sensor Timestamp "+new Date()+" measured ambiant temperature "+msg.payload.json_data);
               // HERE you could change to upload whole msg.payload json object too
+
                 console.log(msg.payload.json_data)
-              let concatWithDate = JSON.stringify("Sensor Timestamp "+new Date()+" measured ambiant temperature "+msg.payload.json_data.ambient);
-              // HERE you could change to upload whole msg.payload json object too
+
+                //deca 19-03-2019 add all the payload
+                //let concatWithDate = JSON.stringify("Sensor Timestamp "+new Date()+" measured ambiant temperature "+msg.payload.json_data.ambient);
+                let concatWithDate = JSON.stringify("Sensor Timestamp "+new Date()+" XDK sensors payload "+msg.payload.json_data);
+
+                // HERE you could change to upload whole msg.payload json object too
               let trytes = iota.utils.toTrytes(concatWithDate)
 
 
